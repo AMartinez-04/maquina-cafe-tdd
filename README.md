@@ -14,5 +14,11 @@ Implementacion de la practica TDD para una maquina dispensadora de cafe.
 ## Ejecutar pruebas
 
 ```powershell
-py -m unittest discover -s tests -v
+.\run_tests.bat
+```
+
+Tambien se pueden ejecutar directamente con Python:
+
+```powershell
+python -m unittest discover -s tests -v
 ```
