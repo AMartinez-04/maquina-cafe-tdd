@@ -1,8 +1,8 @@
-# Diseño técnico 4+1 - Máquina de Café TDD
+# Diseno tecnico 4+1 - Maquina de Cafe TDD
 
-## Información general
+## Informacion general
 
-**Proyecto:** Máquina de Café TDD  
+**Proyecto:** Maquina de Cafe TDD  
 **Lenguaje:** Python  
 **Framework de pruebas:** unittest  
 **Repositorio:** https://github.com/AMartinez-04/maquina-cafe-tdd  
@@ -10,34 +10,34 @@
 
 ## Objetivo del sistema
 
-El sistema implementa una máquina dispensadora de café aplicando la metodología TDD. Permite seleccionar el tamaño del vaso, seleccionar la cantidad de azúcar y servir café, validando la disponibilidad de vasos, café y azúcar antes de descontar los insumos.
+El sistema implementa una maquina dispensadora de cafe aplicando la metodologia TDD. Permite seleccionar el tamano del vaso, seleccionar la cantidad de azucar y servir cafe, validando la disponibilidad de vasos, cafe y azucar antes de descontar los insumos.
 
 ## Requisitos principales
 
-- Seleccionar vaso pequeño con 3 Oz de café.
-- Seleccionar vaso mediano con 5 Oz de café.
-- Seleccionar vaso grande con 7 Oz de café.
-- Seleccionar la cantidad de cucharadas de azúcar.
+- Seleccionar vaso pequeno con 3 Oz de cafe.
+- Seleccionar vaso mediano con 5 Oz de cafe.
+- Seleccionar vaso grande con 7 Oz de cafe.
+- Seleccionar la cantidad de cucharadas de azucar.
 - Mostrar un mensaje cuando no hay vasos disponibles.
-- Mostrar un mensaje cuando no hay café disponible.
-- Mostrar un mensaje cuando no hay azúcar disponible.
-- Descontar los insumos solamente cuando el café se sirve correctamente.
+- Mostrar un mensaje cuando no hay cafe disponible.
+- Mostrar un mensaje cuando no hay azucar disponible.
+- Descontar los insumos solamente cuando el cafe se sirve correctamente.
 
 ## Modelo 4+1
 
-El modelo 4+1 describe la arquitectura del software desde cinco vistas: lógica, desarrollo, procesos, física y escenarios. Para este proyecto, el modelo se adapta a una aplicación pequeña de dominio orientada a pruebas unitarias.
+El modelo 4+1 describe la arquitectura del software desde cinco vistas: logica, desarrollo, procesos, fisica y escenarios. Para este proyecto, el modelo se adapta a una aplicacion pequena de dominio orientada a pruebas unitarias.
 
-## 1. Vista lógica
+## 1. Vista logica
 
-La vista lógica describe las clases principales del sistema y sus responsabilidades.
+La vista logica describe las clases principales del sistema y sus responsabilidades.
 
 ### Componentes principales
 
-- **MaquinaCafe:** coordina el flujo de servir café. Valida existencia de vasos, café y azúcar.
-- **Vaso:** representa un tipo de vaso, su cantidad disponible y las onzas de café que requiere.
-- **Cafetera:** administra la cantidad disponible de café en onzas.
-- **Azucarero:** administra la cantidad disponible de azúcar en cucharadas.
-- **Pruebas unitarias:** validan los criterios de aceptación usando TDD.
+- **MaquinaCafe:** coordina el flujo de servir cafe. Valida existencia de vasos, cafe y azucar.
+- **Vaso:** representa un tipo de vaso, su cantidad disponible y las onzas de cafe que requiere.
+- **Cafetera:** administra la cantidad disponible de cafe en onzas.
+- **Azucarero:** administra la cantidad disponible de azucar en cucharadas.
+- **Pruebas unitarias:** validan los criterios de aceptacion usando TDD.
 
 ### Relaciones
 
@@ -47,46 +47,46 @@ La vista lógica describe las clases principales del sistema y sus responsabilid
 
 ## 2. Vista de desarrollo
 
-La vista de desarrollo muestra cómo está organizado el código fuente.
+La vista de desarrollo muestra como esta organizado el codigo fuente.
 
 ```text
 maquina-cafe-tdd/
-├── cafe/
-│   ├── __init__.py
-│   └── maquina.py
-├── tests/
-│   └── test_maquina_cafe.py
-├── .github/
-│   └── workflows/
-│       └── ci-pipeline.yml
-├── README.md
-├── pyproject.toml
-└── run_tests.bat
+  cafe/
+    __init__.py
+    maquina.py
+  tests/
+    test_maquina_cafe.py
+  .github/
+    workflows/
+      ci-pipeline.yml
+  README.md
+  pyproject.toml
+  run_tests.bat
 ```
 
-### Organización
+### Organizacion
 
-- `cafe/maquina.py`: contiene la lógica del dominio.
+- `cafe/maquina.py`: contiene la logica del dominio.
 - `tests/test_maquina_cafe.py`: contiene los casos de prueba TDD.
-- `.github/workflows/ci-pipeline.yml`: ejecuta el pipeline de integración continua.
-- `README.md`: documenta el objetivo y cómo ejecutar las pruebas.
-- `run_tests.bat`: facilita la ejecución de pruebas en Windows.
+- `.github/workflows/ci-pipeline.yml`: ejecuta el pipeline de integracion continua.
+- `README.md`: documenta el objetivo y como ejecutar las pruebas.
+- `run_tests.bat`: facilita la ejecucion de pruebas en Windows.
 
 ## 3. Vista de procesos
 
-La vista de procesos describe el flujo de ejecución del sistema.
+La vista de procesos describe el flujo de ejecucion del sistema.
 
-### Flujo para servir café
+### Flujo para servir cafe
 
-1. El usuario selecciona el tamaño del vaso.
-2. El usuario selecciona la cantidad de azúcar.
-3. La máquina busca el vaso seleccionado.
-4. La máquina valida si hay vasos disponibles.
-5. La máquina valida si hay café suficiente.
-6. La máquina valida si hay azúcar suficiente.
-7. Si todas las validaciones son correctas, descuenta vaso, café y azúcar.
-8. La máquina retorna el mensaje `Cafe servido`.
-9. Si falta algún insumo, retorna el mensaje correspondiente sin descontar inventario.
+1. El usuario selecciona el tamano del vaso.
+2. El usuario selecciona la cantidad de azucar.
+3. La maquina busca el vaso seleccionado.
+4. La maquina valida si hay vasos disponibles.
+5. La maquina valida si hay cafe suficiente.
+6. La maquina valida si hay azucar suficiente.
+7. Si todas las validaciones son correctas, descuenta vaso, cafe y azucar.
+8. La maquina retorna el mensaje `Cafe servido`.
+9. Si falta algun insumo, retorna el mensaje correspondiente sin descontar inventario.
 
 ### Flujo de CI/CD
 
@@ -97,70 +97,70 @@ La vista de procesos describe el flujo de ejecución del sistema.
 5. Se ejecutan las pruebas con `python -m unittest discover -s tests -v`.
 6. Si todo pasa, el pipeline termina en estado exitoso.
 
-## 4. Vista física
+## 4. Vista fisica
 
-La vista física describe dónde se ejecuta el sistema.
+La vista fisica describe donde se ejecuta el sistema.
 
 ### Entorno local
 
 - Sistema operativo: Windows.
-- Ejecución de pruebas: PowerShell usando `run_tests.bat`.
-- Código fuente almacenado en el equipo local.
+- Ejecucion de pruebas: PowerShell usando `run_tests.bat`.
+- Codigo fuente almacenado en el equipo local.
 
 ### Entorno remoto
 
 - Repositorio remoto: GitHub.
-- Automatización: GitHub Actions.
+- Automatizacion: GitHub Actions.
 - Sistema del pipeline: `ubuntu-latest`.
-- Versión de Python del pipeline: 3.12.
+- Version de Python del pipeline: 3.12.
 
 ## 5. Vista de escenarios
 
 La vista de escenarios conecta la arquitectura con casos de uso reales.
 
-### Escenario 1: Servir vaso pequeño
+### Escenario 1: Servir vaso pequeno
 
-**Dado** que hay vasos pequeños, café y azúcar disponibles.  
-**Cuando** el consumidor selecciona vaso pequeño y una cantidad válida de azúcar.  
-**Entonces** la máquina sirve 3 Oz de café y descuenta los insumos.
+**Dado** que hay vasos pequenos, cafe y azucar disponibles.  
+**Cuando** el consumidor selecciona vaso pequeno y una cantidad valida de azucar.  
+**Entonces** la maquina sirve 3 Oz de cafe y descuenta los insumos.
 
 ### Escenario 2: Servir vaso mediano
 
-**Dado** que hay vasos medianos, café y azúcar disponibles.  
+**Dado** que hay vasos medianos, cafe y azucar disponibles.  
 **Cuando** el consumidor selecciona vaso mediano.  
-**Entonces** la máquina sirve 5 Oz de café.
+**Entonces** la maquina sirve 5 Oz de cafe.
 
 ### Escenario 3: Servir vaso grande
 
-**Dado** que hay vasos grandes, café y azúcar disponibles.  
+**Dado** que hay vasos grandes, cafe y azucar disponibles.  
 **Cuando** el consumidor selecciona vaso grande.  
-**Entonces** la máquina sirve 7 Oz de café.
+**Entonces** la maquina sirve 7 Oz de cafe.
 
 ### Escenario 4: No hay vasos
 
-**Dado** que no hay vasos del tamaño seleccionado.  
-**Cuando** el consumidor intenta servir café.  
-**Entonces** la máquina retorna el mensaje `No hay vasos`.
+**Dado** que no hay vasos del tamano seleccionado.  
+**Cuando** el consumidor intenta servir cafe.  
+**Entonces** la maquina retorna el mensaje `No hay vasos`.
 
-### Escenario 5: No hay café
+### Escenario 5: No hay cafe
 
-**Dado** que la cafetera no tiene café suficiente.  
-**Cuando** el consumidor intenta servir café.  
-**Entonces** la máquina retorna el mensaje `No hay cafe`.
+**Dado** que la cafetera no tiene cafe suficiente.  
+**Cuando** el consumidor intenta servir cafe.  
+**Entonces** la maquina retorna el mensaje `No hay cafe`.
 
-### Escenario 6: No hay azúcar
+### Escenario 6: No hay azucar
 
-**Dado** que el azucarero no tiene azúcar suficiente.  
-**Cuando** el consumidor intenta servir café.  
-**Entonces** la máquina retorna el mensaje `No hay azucar`.
+**Dado** que el azucarero no tiene azucar suficiente.  
+**Cuando** el consumidor intenta servir cafe.  
+**Entonces** la maquina retorna el mensaje `No hay azucar`.
 
-## Decisiones técnicas
+## Decisiones tecnicas
 
-- Se usó Python porque la práctica no exigía un lenguaje específico.
-- Se usó `unittest` porque viene incluido con Python y permite aplicar TDD sin dependencias externas.
-- Se separó la lógica del dominio de las pruebas para mantener una estructura simple y clara.
-- Se configuró GitHub Actions para validar automáticamente el proyecto con cada cambio.
+- Se uso Python porque la practica no exigia un lenguaje especifico.
+- Se uso `unittest` porque viene incluido con Python y permite aplicar TDD sin dependencias externas.
+- Se separo la logica del dominio de las pruebas para mantener una estructura simple y clara.
+- Se configuro GitHub Actions para validar automaticamente el proyecto con cada cambio.
 
-## Conclusión
+## Conclusion
 
-La arquitectura propuesta es sencilla y adecuada para el alcance de la práctica. El diseño separa responsabilidades entre la máquina, los vasos, la cafetera y el azucarero, y se apoya en pruebas unitarias para garantizar que los criterios de aceptación se cumplen.
+La arquitectura propuesta es sencilla y adecuada para el alcance de la practica. El diseno separa responsabilidades entre la maquina, los vasos, la cafetera y el azucarero, y se apoya en pruebas unitarias para garantizar que los criterios de aceptacion se cumplen.
