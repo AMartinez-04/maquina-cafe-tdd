@@ -6,7 +6,7 @@
 **Lenguaje:** Python  
 **Framework de pruebas:** unittest  
 **Repositorio:** https://github.com/AMartinez-04/maquina-cafe-tdd  
-**Integrantes:** Completar con los nombres del grupo
+**Integrante:** Anfeerny Martinez
 
 ## Objetivo del sistema
 
